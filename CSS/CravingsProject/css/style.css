@@ -40,18 +40,50 @@ nav {
   height: 64px;
 }
 
+#restaurantCardGrid {
+  padding: 5rem 0rem;
+  
 
+  .restaurantCards {
+    width: 33%;
+    position: relative;
+    transition: transform 0.2s ease;
 
-#restaurantCardGrid{
-
-  background: linear-gradient(var(--color-primary), white);
-
-
-  img{
-    height: 180px;
     
   }
 
-  
+  .restaurantCards:hover {
+    transform: scale(1.05);
+  }
 
+  img {
+    height: 180px;
+    top: 0px;
+    left: 0px;
+  }
+
+  #rating {
+    background: var(--color-primary);
+    width: 60px;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+  }
+
+  .cuisine{
+    background-color: #e7d9c9
+  }
+
+  button {
+    background: var(--color-primary);
+  }
+}
+
+#stats {
+
+  background: var(--color-base-100);
+
+  .stats-card {
+   background-color: #de1d1d;
+  }
 }
