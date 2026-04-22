@@ -25,7 +25,7 @@ body {
 }
 
 nav {
-  position: fixed;
+  position: sticky;
   width: 100%;
   top: 0px;
   z-index: 1;
@@ -146,3 +146,14 @@ body > footer {
     }
   }
 }
+
+
+#register-section{
+
+  height: 90vh;
+  background-image: url(../images/register-bg.webp);
+  background-position: center;
+  background-size: cover;
+
+}
+
