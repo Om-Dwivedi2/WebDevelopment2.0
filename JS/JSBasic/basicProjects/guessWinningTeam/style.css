@@ -1,0 +1,18 @@
+main {
+  background-color: yellow;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+button{
+    border-radius: 999px !important;
+  padding: 20px 40px;
+  background: red;
+  border: 5px solid black;
+}
