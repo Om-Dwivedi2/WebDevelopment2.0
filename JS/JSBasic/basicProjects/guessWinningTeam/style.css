@@ -10,9 +10,20 @@ main {
   gap: 30px;
 }
 
-button{
-    border-radius: 999px !important;
-  padding: 20px 40px;
-  background: red;
-  border: 5px solid black;
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: wheat;
+}
+
+button:active {
+  scale: 0.95;
+}
+
+img {
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
 }
