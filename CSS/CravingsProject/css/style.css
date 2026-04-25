@@ -41,7 +41,7 @@ nav {
   }
 
   #loginButton:hover {
-    border: 1px solid white;
+    outline: 1px solid white;
   }
 
   #registerButton:hover {
@@ -141,19 +141,101 @@ body > footer {
       color: white;
     }
 
-    a:hover{
+    a:hover {
       color: var(--color-primary);
     }
   }
 }
 
-
-#register-section{
-
+#register-section {
   height: 90vh;
   background-image: url(../images/register-bg.webp);
   background-position: center;
   background-size: cover;
 
+  main {
+    padding: 24px 40px;
+  }
+
+  h3 {
+    color: var(--color-primary);
+  }
+
+  .register-details {
+    font-size: small;
+    outline: 1px solid rgb(188, 188, 188);
+    border: 0px;
+  }
+
+  .register-details:focus {
+    outline: 2px solid var(--color-primary);
+  }
+
+  a {
+    text-decoration: none;
+    font-size: small;
+    color: var(--color-primary);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    font-size: small;
+    color: grey;
+  }
+
+  label {
+    font-size: small;
+  }
+
+  button {
+    background: var(--color-primary);
+  }
 }
 
+#login-section {
+  height: 90vh;
+  background-image: url(../images/register-bg.webp);
+  background-position: center;
+  background-size: cover;
+
+  main {
+    padding: 24px 40px;
+  }
+
+  h3 {
+    color: var(--color-primary);
+  }
+
+  .login-details {
+    font-size: small;
+    outline: 1px solid rgb(188, 188, 188);
+    border: 0px;
+  }
+
+  .login-details:focus {
+    outline: 2px solid var(--color-primary);
+  }
+
+  a {
+    text-decoration: none;
+    font-size: small;
+    color: var(--color-primary);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    font-size: small;
+    color: grey;
+  }
+
+  button {
+    background: var(--color-primary);
+  }
+
+}

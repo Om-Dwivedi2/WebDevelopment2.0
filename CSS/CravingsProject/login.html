@@ -19,14 +19,78 @@
     />
   </head>
   <body>
+    <nav class="d-flex align-items-center justify-content-between px-5">
+      <a class="text-decoration-none" href="./index.html"
+        ><img src="./images/logo-light.png" alt=""
+      /></a>
+      <div class="d-flex gap-2">
+        <a
+          id="loginButton"
+          class="text-decoration-none text-white px-3 py-1 rounded-2"
+          href="./login.html"
+          >Login</a
+        >
+        <a
+          id="registerButton"
+          class="text-decoration-none border border-white px-3 py-1 rounded-2"
+          href="./register.html"
+          >Register</a
+        >
+      </div>
+    </nav>
 
+    <section
+      id="login-section"
+      class="d-flex align-items-center justify-content-start px-5"
+    >
+      <main class="bg-white rounded d-grid mx-5 w-auto">
+        <h3 class="text-center fw-bold">Welcome Back</h3>
+        <p class="text-center">Login to your Cravings account</p>
 
+        <div class="d-grid gap-2 py-2">
+          <label for="email" class="fw-semibold">Email</label>
+          <input
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            class="p-2 rounded-1 login-details"
+          />
+        </div>
 
-    <div>login page</div>
+        <div class="d-grid gap-2 py-2">
+          <label for="password" class="fw-semibold">Password</label>
+          <input
+            name="password"
+            type="password"
+            placeholder="Enter your password"
+            class="p-2 rounded-1 login-details"
+          />
+        </div>
 
+        <div class="d-flex gap-2 align-items-center">
+          <input type="checkbox" name="rememberMe" id="rememberMe" />
+          <label
+            for="rememberMe"
+            class="d-flex justify-content-between"
+            style="gap: 100px"
+          >
+            <p class="mb-0">Remember me</p>
+            <p class="mb-0"><a href="#">Forgot Password?</a></p>
+          </label>
+        </div>
 
+        <button class="my-3 text-white p-2 rounded-2 border-0 fw-semibold">
+          Login
+        </button>
 
+        <div class="d-flex align-items-center justify-content-center">
+          <hr class="flex-grow-1" />
+          <p class="px-2 m-0">Don't have an account?</p>
+          <hr class="flex-grow-1" />
+        </div>
 
-
+        <a href="#" class="text-center fw-semibold pt-3">Create an account</a>
+      </main>
+    </section>
   </body>
 </html>

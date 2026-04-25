@@ -39,15 +39,80 @@
       </div>
     </nav>
 
-    <section id="register-section" class=" d-flex align-items-center justify-content-end px-5">
-      <main class="bg-white">
-        <h2>Create Account</h2>
-          <p>Join us as a Customer, Restaurant, or Rider</p>
-          <div>Register as:</div>
-          <input type="checkbox" name="customer" id="customer">
-          <label for="customer">Customer</label>
+    <section
+      id="register-section"
+      class="d-flex align-items-center justify-content-end px-5"
+    >
+      <main class="bg-white rounded d-grid mx-5 w-auto">
+        <h3 class="text-center fw-bold">Create Account</h3>
+        <p class="text-center">Join us as a Customer, Restaurant, or Rider</p>
+        <p class="fw-semibold text-black mb-1">Register as:</p>
+
+        <div class="d-flex gap-3 pe-5">
+          <div>
+            <input type="radio" name="userType" id="customer" />
+            <label for="customer">Customer</label>
+          </div>
+
+          <div>
+            <input type="radio" name="userType" id="restaurant" />
+            <label for="restaurant">Restaurant</label>
+          </div>
+
+          <div>
+            <input type="radio" name="userType" id="rider" />
+            <label for="rider">Rider</label>
+          </div>
+        </div>
+
+        <div class="d-grid gap-3 py-3">
+          <input
+            name="name"
+            type="text"
+            placeholder="Enter your full name"
+            class="p-2 rounded-1 register-details"
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            class="p-2 rounded-1 register-details"
+          />
+          <input
+            name="phoneNumber"
+            type="tel"
+            placeholder="Enter your phone number"
+            class="p-2 rounded-1 register-details"
+          />
+          <input
+            name="password"
+            type="password"
+            placeholder="Enter your password"
+            class="p-2 rounded-1 register-details"
+          />
+          <input
+            name="confirmPassword"
+            type="password"
+            placeholder="Confirm your password"
+            class="p-2 rounded-1 register-details"
+          />
+        </div>
+
+        <div class="d-flex gap-2 align-items-center">
+          <input type="checkbox" name="terms" id="terms" />
+          <label for="terms" class="d-flex gap-1">
+            <p class="mb-0">I agree to the <a href="./terms-of-service.html">terms and conditions</a></p>
+          </label>
+        </div>
+
+        <button class="my-3 text-white p-2 rounded-2 border-0 fw-semibold ">Register</button>
+
+        <p class="text-center">Already registered? <a href="./login.html">Login here</a></p>
+
       </main>
     </section>
+
+    
 
   </body>
 </html>
