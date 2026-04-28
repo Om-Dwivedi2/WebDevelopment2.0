@@ -281,12 +281,70 @@ body > footer {
 
 #about-story{
   background-color: var(--color-base-100);
-  padding: 5rem 20rem;
+  
 
   i{
     color: var(--color-primary);
     font-size: x-large;
   }
 
+  #about-story-cards{
+    p{
+      font-size: small;
+    }
+  }
+
+}
+
+
+
+#about-values{
+
+  background-color: var(--color-base-200);
+
+  main>div{
+    color: var(--color-primary);
+    
+  }
+
+  i{
+    color: var(--color-primary);
+    
+  }
+
+  p{
+    font-size: small;
+  }
+
+}
+
+#about-team{
+  background-color: var(--color-base-100);
+
+  .about-team-profile{
+    background-color: var(--color-primary);
+    width: 80px;
+    height: 80px;
+  }
+
+  p{
+    color: var(--color-secondary);
+    font-size: small;
+  }
+}
+
+#about-contact{
+  background-color: var(--color-primary);
+  p{
+    color: lavender;
+  }
+
+  #about-contact-btn1{
+    color: var(--color-primary);
+  }
+
+  #about-contact-btn2{
+    background-color: var(--color-primary);
+  }
 
 }
