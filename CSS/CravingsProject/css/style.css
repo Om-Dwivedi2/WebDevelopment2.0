@@ -115,7 +115,7 @@ nav {
 
 #partner {
   background: var(--color-primary);
-
+  
   a {
     text-decoration: none;
     background-color: #fff;
@@ -135,8 +135,13 @@ body > footer {
     width: 128px;
   }
 
+  p{
+    font-size: small;
+  }
+
   section {
     a {
+      font-size: small;
       text-decoration: none;
       color: white;
     }
@@ -271,7 +276,7 @@ body > footer {
     color: var(--color-primary);
   }
 
-  p{
+  p {
     margin: 0px;
     padding: 0px;
     color: white;
@@ -279,72 +284,116 @@ body > footer {
   }
 }
 
-#about-story{
+#about-story {
   background-color: var(--color-base-100);
-  
 
-  i{
+  i {
     color: var(--color-primary);
     font-size: x-large;
   }
 
-  #about-story-cards{
-    p{
+  #about-story-cards {
+    p {
       font-size: small;
     }
   }
-
 }
 
-
-
-#about-values{
-
+#about-values {
   background-color: var(--color-base-200);
 
-  main>div{
+  main > div {
     color: var(--color-primary);
-    
   }
 
-  i{
+  i {
     color: var(--color-primary);
-    
   }
 
-  p{
+  p {
     font-size: small;
   }
-
 }
 
-#about-team{
+#about-team {
   background-color: var(--color-base-100);
 
-  .about-team-profile{
+  .about-team-profile {
     background-color: var(--color-primary);
     width: 80px;
     height: 80px;
   }
 
-  p{
+  p {
     color: var(--color-secondary);
     font-size: small;
   }
 }
 
-#about-contact{
+#about-contact {
   background-color: var(--color-primary);
-  p{
+  p {
     color: lavender;
   }
 
-  #about-contact-btn1{
+  #about-contact-btn1 {
     color: var(--color-primary);
   }
 
-  #about-contact-btn2{
+  #about-contact-btn2 {
     background-color: var(--color-primary);
   }
+}
 
+#feedback-section {
+  background-image: url(https://cravings.ricr.in/FeedbackPage.jpeg);
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 6rem;
+
+  main{
+    width: auto;
+    
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  h3 {
+    color: var(--color-primary);
+  }
+
+  input {
+    border: 1px solid #e6d8c8;
+  }
+
+  input:focus {
+    outline: 2px solid var(--color-primary);
+  }
+
+  select {
+    border: 1px solid #e6d8c8;
+  }
+
+  select:focus {
+    outline: 2px solid var(--color-primary);
+  }
+
+  i {
+    color: #d1d5dc;
+  }
+
+  textarea {
+    border: 1px solid #e6d8c8;
+    resize: none;
+  }
+
+  textarea:focus {
+    outline: 2px solid var(--color-primary);
+  }
+
+  button{
+    background-color: var(--color-primary);
+    
+  }
 }
