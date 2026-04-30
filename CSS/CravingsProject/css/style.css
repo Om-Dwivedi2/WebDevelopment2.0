@@ -53,6 +53,10 @@ nav {
   height: 64px;
 }
 
+.cuisine {
+    background-color: #e7d9c9;
+  }
+
 #restaurantCardGrid {
   padding: 5rem 0rem;
 
@@ -80,9 +84,7 @@ nav {
     position: absolute;
   }
 
-  .cuisine {
-    background-color: #e7d9c9;
-  }
+  
 
   button {
     background: var(--color-primary);
@@ -396,4 +398,63 @@ body > footer {
     background-color: var(--color-primary);
     
   }
+}
+
+
+#contact-section {
+  background-image: url(https://cravings.ricr.in/contactPage.jpg);
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 6rem;
+
+  main{
+    width: auto;
+    
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  h3 {
+    color: var(--color-primary);
+  }
+
+  input {
+    border: 1px solid #e6d8c8;
+  }
+
+  input:focus {
+    outline: 2px solid var(--color-primary);
+  }
+
+  
+  i {
+    color: #d1d5dc;
+  }
+
+  textarea {
+    border: 1px solid #e6d8c8;
+    resize: none;
+  }
+
+  textarea:focus {
+    outline: 2px solid var(--color-primary);
+  }
+
+  button{
+    background-color: var(--color-primary);
+    
+  }
+
+  p{
+    color: var(--color-secondary);
+  }
+}
+
+.cuisine2{
+  background: var(--color-base-200);
+}
+
+#order-now-section{
+  background-color: var(--color-base-200);
 }

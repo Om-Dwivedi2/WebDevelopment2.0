@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
+    <title>Craving</title>
 
     <link rel="stylesheet" href="./css/style.css" />
     <link
@@ -19,14 +19,56 @@
     />
   </head>
   <body>
+    <nav class="d-flex align-items-center justify-content-between px-5">
+      <a class="text-decoration-none" href="./index.html"
+        ><img src="./images/logo-light.png" alt=""
+      /></a>
+      <div class="d-flex gap-2">
+        <a
+          id="loginButton"
+          class="text-decoration-none text-white px-3 py-1 rounded-2"
+          href="./login.html"
+          >Login</a
+        >
+        <a
+          id="registerButton"
+          class="text-decoration-none border border-white px-3 py-1 rounded-2"
+          href="./register.html"
+          >Register</a
+        >
+      </div>
+    </nav>
 
+    <section id="order-now-section" class="">
+      <div class="container-fluid bg-white rounded-3">
+        <div class="d-flex border-1">
+          <i class="bi bi-search"></i>
+          <input type="text" placeholder="Search restaurant and cuisines..." />
+        </div>
+      </div>
 
+      <main class="container">
+        <h3 class="fw-semibold">All Restaurants</h3>
+        <div>3 restaurants available</div>
 
-    <div>order-Now</div>
-
-
-
-
-
+        <div id="order-now-cards" class="container-fluid">
+          <div class="row">
+            <div class="col card">
+              <img src="./images/restaurant1.avif" alt="" />
+              <div class="fs-5 fw-bold">Under The Mango Tree</div>
+              <p>
+                Enjoy the thrill of grill and barbecue at Under The Mango Tree
+                restaurant at Jehan Numa Palace, Bhopal. Head here now!
+              </p>
+              <div class="d-flex align-content-center justify-content-start gap-2">
+                <div class="cuisine2 px-2 py-1 rounded-2 fs" style="font-size: small;">Indian</div>
+                <div class="cuisine2 px-2 py-1 rounded-2 fs" style="font-size: small;">Chineese</div>
+                <div class="cuisine2 px-2 py-1 rounded-2 fs" style="font-size: small;">Ittalian</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
   </body>
 </html>

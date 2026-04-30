@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    color: #fff;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+main{
+    background: rgb(39, 39, 39);
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+
