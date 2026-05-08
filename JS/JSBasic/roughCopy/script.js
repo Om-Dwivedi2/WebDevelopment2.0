@@ -56,25 +56,47 @@
 
 // console.log(data);
 
-let choice = -2;
-switch (choice) {
-  case 1: {
-    console.log("Tea");
-    break;
-  }
+// let choice = -2;
+// switch (choice) {
+//   case 1: {
+//     console.log("Tea");
+//     break;
+//   }
 
-  case 2: {
-    console.log("Coffee");
-    break;
-  }
+//   case 2: {
+//     console.log("Coffee");
+//     break;
+//   }
 
-  case 3: {
-    console.log("Lassi");
-    break;
-  }
+//   case 3: {
+//     console.log("Lassi");
+//     break;
+//   }
 
-  default: {
-    console.log("Water");
-    break;
-  }
+//   default: {
+//     console.log("Water");
+//     break;
+//   }
+// }
+
+//----------------Functions-------------//
+
+// let a = 10,
+//   b = 20;
+
+// function sum(x, y) {
+//   let z = x + y;
+//   console.log(z);
+// }
+
+// sum(a, b);
+
+
+let abc = function () {
+  console.log("Hello");
+  
 }
+
+console.log(abc);
+
+abc();   // isse abc variable hi function bann gaya
