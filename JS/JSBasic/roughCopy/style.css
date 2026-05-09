@@ -1,42 +1,35 @@
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-    color: #fff;
+  margin: 0px;
+  padding: 0px;
+font-family: 'helvetica';
+  box-sizing: border-box;
 }
+
 html,
-body {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+body, main{
+  width: 100vw;
+  height: 100vh;
+  
 }
+
 
 main{
-    background: rgb(39, 39, 39);
-    height: 100%;
-    width: 100%;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
-
 
 button{
-    position: relative;
-    z-index: 1;
-    width: 100px;
-    padding: 10px 25px;
-    border: 2px solid #ffffff;
-    background: red;
-    color: white;
-    border-radius: 20px;
-    font-size: 20px !important;
-    border-radius: 15px !important;
-    
-} 
-
-button:active{
-    scale: 0.95;
-    
+    padding: 15px;
+    background-color: red;
+    border-radius: 5px;
+    border: 0px;
+    font-size: larger;
 }
 
-
+button:hover{
+    transform: scale(0.95);
+}

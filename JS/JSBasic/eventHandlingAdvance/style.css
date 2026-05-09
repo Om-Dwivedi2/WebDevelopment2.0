@@ -1,0 +1,22 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body{
+  width: 100vw;
+  height: 100vh;
+}
+
+#bulb1{
+  width: 150px;
+  height: 150px;
+}
+
+.box{
+  width: 50px;
+  height: 25px;
+  
+}
