@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body class="bg-primary">
+    <h4
+      class="mt-5 text-center w-25 rounded-top-4 mx-auto text-white p-2"
+      style="background-color: orange"
+    >
+      Tip Calculator
+    </h4>
+    <main
+      class="bg-light rounded-4 shadow border mx-auto w-25 px-4 py-4 d-flex flex-column gap-2"
+    >
+      <label for="bill">Bill Amount</label>
+      <input type="number" name="bill" id="bill" class="form-control" />
+
+      <label for="service">How was the service ?</label>
+      <select class="form-control" name="service" id="service">
+        <option value="" disabled selected>Default</option>
+        <option value="25">25% - Top Notch</option>
+        <option value="20">20% Excellent</option>
+        <option value="15">15% - Good</option>
+        <option value="10">10% - Bad</option>
+        <option value="25">5% - Worst</option>
+      </select>
+
+      <label for="people">Total Number of person</label>
+      <input type="number" name="people" id="people" class="form-control" />
+      <button class="mx-auto btn btn-outline-info mt-3">Calculate</button>
+
+      <section id="result" class="text-center fw-semibold opacity-0">
+        <div>Tip Amount:</div>
+        <div id="amount">xx.xx $</div>
+        <div>Each</div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

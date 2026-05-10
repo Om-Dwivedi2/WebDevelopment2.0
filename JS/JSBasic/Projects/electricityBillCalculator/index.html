@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electricity Bill Calculator</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body class="bg-primary">
+    <h4
+      class="mt-5 text-center w-25 rounded-top-4 mx-auto text-white p-2"
+      style="background-color: orange"
+    >
+      Electricity Bill Calculator
+    </h4>
+    <main
+      class="bg-light rounded-4 shadow border mx-auto w-25 px-4 py-4 d-flex flex-column gap-2"
+    >
+      <label for="units">Enter Electricity units:</label>
+      <input type="number" name="units" id="units" min="0" class="form-control" />
+
+      <div class="d-flex justify-content-center gap-5 mt-4">
+        <button id="calculate" class="btn btn-outline-success">
+          Calculate
+        </button>
+        <button id="clear" class="btn btn-outline-danger">Clear</button>
+      </div>
+      <section id="result" class="bg-white rounded mt-3 p-3 shadow  d-none">
+        <div class="d-flex justify-content-between">
+          <span>First 50 units:</span>
+          <span>xx</span>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <span>Next 150 units:</span>
+          <span>xx</span>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <span>Next 250 units:</span>
+          <span>xx</span>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <span>Above 450 units:</span>
+          <span>xx</span>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <span>Subtotal</span>
+          <span>xx</span>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <span>Surcharge</span>
+          <span>xx</span>
+        </div>
+
+         <div class="d-flex justify-content-between">
+          <span>Total</span>
+          <span>xx</span>
+        </div>
+
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
