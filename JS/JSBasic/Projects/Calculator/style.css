@@ -1,0 +1,39 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://learn.ricr.in/pluginfile.php/6753/mod_page/content/8/CalculatorBGImage.png);
+  background-size: cover;
+}
+
+#calculator{
+  width: 90%;
+  max-width: 350px;
+}
+
+.circle {
+  aspect-ratio: 1/1;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greenCircle {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
