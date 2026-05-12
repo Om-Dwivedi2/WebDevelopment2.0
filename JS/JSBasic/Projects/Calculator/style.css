@@ -13,7 +13,7 @@ body {
 main {
   width: 100vw;
   height: 100vh;
-  background-image: url(https://learn.ricr.in/pluginfile.php/6753/mod_page/content/8/CalculatorBGImage.png);
+  background-image: url(./asserts/CalculatorBGImage.png);
   background-size: cover;
 }
 

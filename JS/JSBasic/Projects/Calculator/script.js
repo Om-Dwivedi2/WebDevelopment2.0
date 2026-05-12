@@ -1,19 +1,46 @@
-function calculate(e) {
-  console.log(e);
+const display = document.querySelector("#text");
+document.addEventListener("keydown", (e) => {
+  let keyValue = e.key;
 
-  let keyValue;
-  const display = document.getElementById("text");
-  document.addEventListener("keydown", (e)=>{
-    keyValue = e.key;
-    console.log(keyValue);
-    
-  })
-
-  if (keyValue === "Escape") {
+  if (keyValue == "Escape") {
     display.innerText = "0";
-    return;
   }
 
+  if (keyValue === "Backspace") {
+    if (display.innerText === "0") {
+      return;
+    }
+    display.innerText = display.innerText.slice(0, -1);
+  }
+
+  if (
+    (keyValue >= "0" && keyValue <= "9") ||
+    keyValue === "/" ||
+    keyValue === "*" ||
+    keyValue === "-" ||
+    keyValue === "+" ||
+    keyValue === "."
+  ) {
+    if (display.innerText === "0") {
+      display.innerText = keyValue;
+      return;
+    }
+
+    display.innerText = display.innerText + keyValue;
+  }
+
+  try {
+    if (keyValue === "Enter") {
+      display.innerText = eval(display.innerText);
+    }
+  } catch (error) {
+    alert("Given Expression cannot be calculated");
+    window.location.reload();
+  }
+});
+
+function calculate(e) {
+  console.log(e);
   if (e === "AC") {
     display.innerText = "0";
     return;
@@ -33,14 +60,15 @@ function calculate(e) {
     return;
   }
 
-  if (e === "=") {
-    display.innerText = eval(display.innerText);
-    return;
+  try {
+    if (e === "=") {
+      display.innerText = eval(display.innerText);
+      return;
+    }
+  } catch (error) {
+    alert("Given Expression cannot be calculated");
+    window.location.reload();
   }
 
   display.innerText = display.innerText + e;
-
-  // const expression = document.getElementById("text").value;
-
-  // console.log(expression);
 }
