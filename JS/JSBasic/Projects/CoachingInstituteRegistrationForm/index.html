@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coaching Institute Registration Form</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body class="bg-primary">
+    <h2
+      class="bg-warning rounded-3 mx-auto my-3 text-center text-white p-2 w-50"
+    >
+      Coaching Institute Registration Form
+    </h2>
+
+    <form class="container rounded rounded-4 p-5 border border-1 bg-light d-grid gap-5 ">
+      <section
+        id="personalInfo"
+        class="border border-1 p-5 rounded-4 d-grid gap-4"
+      >
+        <div class="tag bg-light">Personal Information</div>
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="fullName">Full Name:</label>
+            <input
+              required
+              type="text"
+              name="fullName"
+              id="fullName"
+              class="w-75 form-control"
+            />
+          </div>
+          <span class="error mt-1 text-danger d-flex justify-content-end"
+            >* Please enter correct Name</span
+          >
+        </div>
+
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="email">Email:</label>
+            <input
+              required
+              type="text"
+              name="email"
+              id="email"
+              class="w-75 form-control"
+            />
+          </div>
+          <span class="error mt-1 text-danger d-flex justify-content-end"
+            >* Please enter correct Email</span
+          >
+        </div>
+
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="phone">MOB No:</label>
+            <input
+              required
+              type="text"
+              name="phone"
+              id="phone"
+              class="w-75 form-control"
+            />
+          </div>
+          <span class="error mt-1 text-danger d-flex justify-content-end"
+            >* Please enter correct Mobile Number</span
+          >
+        </div>
+
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="DOB">Date of Birth:</label>
+            <input
+              required
+              type="text"
+              name="DOB"
+              id="DOB"
+              class="w-75 form-control"
+            />
+          </div>
+          <span class="error mt-1 text-danger d-flex justify-content-end"
+            >* Please enter correct DOB</span
+          >
+        </div>
+      </section>
+
+      <section
+        id="academicDetail"
+        class="border border-1 p-5 rounded-4 d-grid gap-4"
+      >
+        <div class="tag bg-light">Academic Details</div>
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="qualification">Last Completed Qualification:</label>
+            <select class="form-select w-75" id="qualification" >
+              <option selected disabled>-- Select your Qualification --</option>
+              <option value="10th">10th</option>
+              <option value="12th">12th</option>
+              <option value="Graduate">Graduate</option>
+              <option value="Postgraduate">Postgraduate</option>
+            </select>
+          </div>
+          <span class="error mt-1 text-danger d-flex justify-content-end"
+            >* Please enter correct Mobile Number</span
+          >
+        </div>
+
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="percentage">Percentage:</label>
+            <input
+              required
+              type="text"
+              name="percentage"
+              id="percentage"
+              class="w-75 form-control"
+            />
+          </div>
+          <span class="error mt-1 text-danger d-flex justify-content-end"
+            >* Please enter correct Percentage</span
+          >
+        </div>
+      </section>
+
+
+      <section
+        id="courseInformation"
+        class="border border-1 p-5 rounded-4 d-grid gap-4"
+      >
+        <div class="tag bg-light">Course Information</div>
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="course">Preferred Course:</label>
+            <select class="form-select w-75" id="course" >
+              <option selected disabled>-- Select your Qualification --</option>
+              <option value="IIT-JEE">IIT-JEE</option>
+              <option value="NEET">NEET</option>
+              <option value="BankingExams">Banking Exams</option>
+              <option value="UPSC">UPSC</option>
+            </select>
+          </div>
+          <span class="error mt-1 text-danger d-flex justify-content-end"
+            >* Please enter correct Mobile Number</span
+          >
+        </div>
+
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="batch">Batch Timing Preference:</label>
+            <select class="form-select w-75" id="batch" >
+              <option selected disabled>-- Select your Batch --</option>
+              <option value="Morning">Morning</option>
+              <option value="Afternoon">Afternoon</option>
+              <option value="Evening">Evening</option>
+              <option value="Weekend">Weekend</option>
+            </select>
+          </div>
+          <span class="error mt-1 text-danger d-flex justify-content-end"
+            >* Please enter correct Mobile Number</span
+          >
+        </div>
+      </section>
+
+
+
+
+
+
+
+    </form>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

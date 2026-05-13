@@ -24,10 +24,9 @@ document.getElementById("addTask").addEventListener("click", (e) => {
 
   const BTN = document.createElement("button");
   BTN.classList.add("btn", "btn-outline-danger");
-  BTN.onclick = () => {
-    
+  BTN.addEventListener("click", () => {
     LI.remove();
-  };
+  });
 
   const I = document.createElement("i");
   I.classList.add("bi", "bi-trash");

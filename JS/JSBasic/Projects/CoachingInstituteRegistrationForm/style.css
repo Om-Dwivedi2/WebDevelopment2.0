@@ -1,0 +1,35 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Helvetica";
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.error{
+  font-size: small;
+}
+form{
+  ma
+}
+
+section{
+  position: relative;
+
+  
+
+
+
+}
+
+.tag{
+  position: absolute;
+  padding: 0px 10px;
+  top: -12px;
+  left: 35px;
+}
