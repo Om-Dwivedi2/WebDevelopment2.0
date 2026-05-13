@@ -19,13 +19,15 @@
     />
   </head>
   <body class="bg-primary">
-    <h2
-      class="bg-warning rounded-3 mx-auto my-3 text-center text-white p-2 w-50"
+    <header
+      class="bg-warning rounded-3 mx-auto my-3 text-center text-white p-2 col-12 col-md-8 col-lg-6"
     >
-      Coaching Institute Registration Form
-    </h2>
+      <h2>Coaching Institute Registration Form</h2>
+    </header>
 
-    <form class="container rounded rounded-4 p-5 border border-1 bg-light d-grid gap-5 ">
+    <form
+      class="container rounded rounded-4 p-5 border border-1 bg-light d-grid gap-5"
+    >
       <section
         id="personalInfo"
         class="border border-1 p-5 rounded-4 d-grid gap-4"
@@ -43,7 +45,7 @@
             />
           </div>
           <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Please enter correct Name</span
+            >* Please enter a valid name</span
           >
         </div>
 
@@ -59,7 +61,7 @@
             />
           </div>
           <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Please enter correct Email</span
+            >* Please enter a valid email address</span
           >
         </div>
 
@@ -75,7 +77,7 @@
             />
           </div>
           <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Please enter correct Mobile Number</span
+            >* Enter a 10-digit Indian mobile number</span
           >
         </div>
 
@@ -91,7 +93,7 @@
             />
           </div>
           <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Please enter correct DOB</span
+            >* You must be at least 15 years old</span
           >
         </div>
       </section>
@@ -104,7 +106,7 @@
         <div>
           <div class="d-flex align-items-center justify-content-between">
             <label for="qualification">Last Completed Qualification:</label>
-            <select class="form-select w-75" id="qualification" >
+            <select required class="form-select w-75" id="qualification">
               <option selected disabled>-- Select your Qualification --</option>
               <option value="10th">10th</option>
               <option value="12th">12th</option>
@@ -113,7 +115,7 @@
             </select>
           </div>
           <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Please enter correct Mobile Number</span
+            >* Please select a qualification</span
           >
         </div>
 
@@ -129,11 +131,10 @@
             />
           </div>
           <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Please enter correct Percentage</span
+            >* Enter a valid percentage or grade</span
           >
         </div>
       </section>
-
 
       <section
         id="courseInformation"
@@ -143,7 +144,7 @@
         <div>
           <div class="d-flex align-items-center justify-content-between">
             <label for="course">Preferred Course:</label>
-            <select class="form-select w-75" id="course" >
+            <select required class="form-select w-75" id="course">
               <option selected disabled>-- Select your Qualification --</option>
               <option value="IIT-JEE">IIT-JEE</option>
               <option value="NEET">NEET</option>
@@ -152,14 +153,14 @@
             </select>
           </div>
           <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Please enter correct Mobile Number</span
+            >* Select a course</span
           >
         </div>
 
         <div>
           <div class="d-flex align-items-center justify-content-between">
             <label for="batch">Batch Timing Preference:</label>
-            <select class="form-select w-75" id="batch" >
+            <select required class="form-select w-75" id="batch">
               <option selected disabled>-- Select your Batch --</option>
               <option value="Morning">Morning</option>
               <option value="Afternoon">Afternoon</option>
@@ -168,17 +169,133 @@
             </select>
           </div>
           <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Please enter correct Mobile Number</span
+            >* Select a batch timing</span
           >
         </div>
       </section>
 
+      <section id="address" class="border border-1 p-5 rounded-4 d-grid gap-4">
+        <div class="tag bg-light">Address</div>
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="residentialAddress">Residential Address:</label>
+            <textarea
+              id="residentialAddress"
+              class="resdentialAddress form-control w-75"
+              required
+            ></textarea>
+          </div>
+          <span class="error mt-1 text-danger d-flex justify-content-end"
+            >* Enter your full address</span
+          >
+        </div>
 
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="city">City:</label>
+            <input
+              required
+              type="text"
+              name="city"
+              id="city"
+              class="w-75 form-control"
+            />
+          </div>
+          <span class="error mt-1 text-danger d-flex justify-content-end"
+            >* Please enter a valid city name</span
+          >
+        </div>
 
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="pinCode">Pin Code:</label>
+            <input
+              required
+              type="number"
+              name="pinCode"
+              id="pinCode"
+              class="w-75 form-control"
+            />
+          </div>
+          <span class="error mt-1 text-danger d-flex justify-content-end"
+            >* Enter a valid 6-digit pin code</span
+          >
+        </div>
+      </section>
 
+      <section
+        id="guardianDetails"
+        class="border border-1 p-5 rounded-4 d-grid gap-4"
+      >
+        <div class="tag bg-light">Guardian Details</div>
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="guardianFullName">Guardian's Full Name:</label>
+            <input
+              required
+              type="text"
+              name="guardianFullName"
+              id="guardianFullName"
+              class="w-75 form-control"
+            />
+          </div>
+          <span class="error mt-1 text-danger d-flex justify-content-end"
+            >* Enter guardian's full name</span
+          >
+        </div>
 
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="guardianContactNumber"
+              >Guardian's Contact Number:</label
+            >
+            <input
+              required
+              type="text"
+              name="guardianContactNumber"
+              id="guardianContactNumber"
+              class="w-75 form-control"
+            />
+          </div>
+          <span class="error mt-1 text-danger d-flex justify-content-end"
+            >* Enter a valid 10-digit contact number</span
+          >
+        </div>
+      </section>
 
+      <section
+        id="additionalInfo"
+        class="border border-1 p-5 rounded-4 d-grid gap-4"
+      >
+        <div class="tag bg-light">Additional Information</div>
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="referral">How did you hear about us?</label>
+            <select required class="form-select w-75" id="referral">
+              <option selected disabled>-- Select Sources --</option>
+              <option value="Friends">Friends</option>
+              <option value="OnlineAd">Online Ad</option>
+              <option value="Newspaper">Newspaper</option>
+              <option value=" SocialMedia">Social Media</option>
+              <option value=" Others">Others</option>
+            </select>
+          </div>
+          <span class="error mt-1 text-danger d-flex justify-content-end"
+            >* Select an option</span
+          >
+        </div>
 
+        <div>
+          <div class="d-flex align-items-center justify-content-between">
+            <label for="special">Special Requirements:</label>
+            <textarea
+              id="special"
+              class="resdentialAddress form-control w-75"
+            ></textarea>
+          </div>
+          
+        </div>
+      </section>
     </form>
 
     <script
