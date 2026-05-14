@@ -20,7 +20,7 @@
   </head>
   <body class="bg-primary">
     <header
-      class="bg-warning rounded-3 mx-auto my-3 text-center text-white p-2 col-12 col-md-8 col-lg-6"
+      class="container bg-warning rounded-3 my-3 text-center text-white p-2"
     >
       <h2>Coaching Institute Registration Form</h2>
     </header>
@@ -37,64 +37,104 @@
           <div class="d-flex align-items-center justify-content-between">
             <label for="fullName">Full Name:</label>
             <input
-              required
               type="text"
               name="fullName"
               id="fullName"
               class="w-75 form-control"
             />
           </div>
-          <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Please enter a valid name</span
-          >
+          <div class="d-flex justify-content-end">
+            <span id="fullNameError" class="error mt-1 text-danger"></span>
+          </div>
         </div>
 
         <div>
           <div class="d-flex align-items-center justify-content-between">
             <label for="email">Email:</label>
             <input
-              required
               type="text"
               name="email"
               id="email"
               class="w-75 form-control"
             />
           </div>
-          <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Please enter a valid email address</span
-          >
+
+          <div class="d-flex justify-content-end">
+            <span id="emailError" class="error mt-1 text-danger"></span>
+          </div>
         </div>
 
         <div>
           <div class="d-flex align-items-center justify-content-between">
             <label for="phone">MOB No:</label>
             <input
-              required
               type="text"
               name="phone"
               id="phone"
               class="w-75 form-control"
             />
           </div>
-          <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Enter a 10-digit Indian mobile number</span
-          >
+
+          <div class="d-flex justify-content-end">
+            <span id="phoneError" class="error mt-1 text-danger"></span>
+          </div>
         </div>
 
         <div>
           <div class="d-flex align-items-center justify-content-between">
             <label for="DOB">Date of Birth:</label>
-            <input
-              required
-              type="text"
-              name="DOB"
-              id="DOB"
-              class="w-75 form-control"
-            />
+            <input type="date" name="DOB" id="DOB" class="w-75 form-control" />
           </div>
-          <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* You must be at least 15 years old</span
-          >
+          <div class="d-flex justify-content-end">
+            <span id="DOBError" class="error mt-1 text-danger"
+              >* You must be at least 15 years old</span
+            >
+          </div>
+        </div>
+
+        <div>
+          <div class="d-flex align-items-center">
+            <label class="w-25" for="gender">Gender:</label>
+            <div class="d-flex gap-4">
+              <div>
+                <input
+                  type="radio"
+                  name="gender"
+                  id="male"
+                  value="male"
+                  class=""
+                />
+                <label for="male">Male</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  name="gender"
+                  id="female"
+                  value="female"
+                  class=""
+                />
+                <label for="female">Female</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  name="gender"
+                  id="others"
+                  value="others"
+                  class=""
+                />
+                <label for="others">Others</label>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end">
+            <span id="genderError" class="error mt-1 text-danger"
+              ></span
+            >
+          </div>
         </div>
       </section>
 
@@ -106,7 +146,7 @@
         <div>
           <div class="d-flex align-items-center justify-content-between">
             <label for="qualification">Last Completed Qualification:</label>
-            <select required class="form-select w-75" id="qualification">
+            <select class="form-select w-75" id="qualification">
               <option selected disabled>-- Select your Qualification --</option>
               <option value="10th">10th</option>
               <option value="12th">12th</option>
@@ -114,25 +154,29 @@
               <option value="Postgraduate">Postgraduate</option>
             </select>
           </div>
-          <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Please select a qualification</span
-          >
+
+          <div class="d-flex justify-content-end">
+            <span id="qualificationError" class="error mt-1 text-danger"
+              >* Please select a qualification</span
+            >
+          </div>
         </div>
 
         <div>
           <div class="d-flex align-items-center justify-content-between">
             <label for="percentage">Percentage:</label>
             <input
-              required
               type="text"
               name="percentage"
               id="percentage"
               class="w-75 form-control"
             />
           </div>
-          <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Enter a valid percentage or grade</span
-          >
+          <div class="d-flex justify-content-end">
+            <span id="percentageError" class="error mt-1 text-danger"
+              >* Enter a valid percentage or grade</span
+            >
+          </div>
         </div>
       </section>
 
@@ -144,7 +188,7 @@
         <div>
           <div class="d-flex align-items-center justify-content-between">
             <label for="course">Preferred Course:</label>
-            <select required class="form-select w-75" id="course">
+            <select class="form-select w-75" id="course">
               <option selected disabled>-- Select your Qualification --</option>
               <option value="IIT-JEE">IIT-JEE</option>
               <option value="NEET">NEET</option>
@@ -152,15 +196,17 @@
               <option value="UPSC">UPSC</option>
             </select>
           </div>
-          <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Select a course</span
-          >
+          <div class="d-flex justify-content-end">
+            <span id="courseError" class="error mt-1 text-danger"
+              >* Select a course</span
+            >
+          </div>
         </div>
 
         <div>
           <div class="d-flex align-items-center justify-content-between">
             <label for="batch">Batch Timing Preference:</label>
-            <select required class="form-select w-75" id="batch">
+            <select class="form-select w-75" id="batch">
               <option selected disabled>-- Select your Batch --</option>
               <option value="Morning">Morning</option>
               <option value="Afternoon">Afternoon</option>
@@ -168,9 +214,11 @@
               <option value="Weekend">Weekend</option>
             </select>
           </div>
-          <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Select a batch timing</span
-          >
+          <div class="d-flex justify-content-end">
+            <span id="batchError" class="error mt-1 text-danger"
+              >* Select a batch timing</span
+            >
+          </div>
         </div>
       </section>
 
@@ -182,44 +230,47 @@
             <textarea
               id="residentialAddress"
               class="resdentialAddress form-control w-75"
-              required
             ></textarea>
           </div>
-          <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Enter your full address</span
-          >
+          <div class="d-flex justify-content-end">
+            <span id="residentialAddressError" class="error mt-1 text-danger"
+              >* Enter your full address</span
+            >
+          </div>
         </div>
 
         <div>
           <div class="d-flex align-items-center justify-content-between">
             <label for="city">City:</label>
             <input
-              required
               type="text"
               name="city"
               id="city"
               class="w-75 form-control"
             />
           </div>
-          <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Please enter a valid city name</span
-          >
+          <div class="d-flex justify-content-end">
+            <span id="cityError" class="error mt-1 text-danger"
+              >* Please enter a valid city name</span
+            >
+          </div>
         </div>
 
         <div>
           <div class="d-flex align-items-center justify-content-between">
             <label for="pinCode">Pin Code:</label>
             <input
-              required
               type="number"
               name="pinCode"
               id="pinCode"
               class="w-75 form-control"
             />
           </div>
-          <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Enter a valid 6-digit pin code</span
-          >
+          <div class="d-flex justify-content-end">
+            <span id="pinCodeError" class="error mt-1 text-danger"
+              >* Enter a valid 6-digit pin code</span
+            >
+          </div>
         </div>
       </section>
 
@@ -232,16 +283,17 @@
           <div class="d-flex align-items-center justify-content-between">
             <label for="guardianFullName">Guardian's Full Name:</label>
             <input
-              required
               type="text"
               name="guardianFullName"
               id="guardianFullName"
               class="w-75 form-control"
             />
           </div>
-          <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Enter guardian's full name</span
-          >
+          <div class="d-flex justify-content-end">
+            <span id="guardianFullNameError" class="error mt-1 text-danger"
+              >* Enter guardian's full name</span
+            >
+          </div>
         </div>
 
         <div>
@@ -250,16 +302,17 @@
               >Guardian's Contact Number:</label
             >
             <input
-              required
               type="text"
               name="guardianContactNumber"
               id="guardianContactNumber"
               class="w-75 form-control"
             />
           </div>
-          <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Enter a valid 10-digit contact number</span
-          >
+          <div class="d-flex justify-content-end">
+            <span id="guardianContactNumberError" class="error mt-1 text-danger"
+              >* Enter a valid 10-digit contact number</span
+            >
+          </div>
         </div>
       </section>
 
@@ -271,7 +324,7 @@
         <div>
           <div class="d-flex align-items-center justify-content-between">
             <label for="referral">How did you hear about us?</label>
-            <select required class="form-select w-75" id="referral">
+            <select class="form-select w-75" id="referral">
               <option selected disabled>-- Select Sources --</option>
               <option value="Friends">Friends</option>
               <option value="OnlineAd">Online Ad</option>
@@ -280,9 +333,11 @@
               <option value=" Others">Others</option>
             </select>
           </div>
-          <span class="error mt-1 text-danger d-flex justify-content-end"
-            >* Select an option</span
-          >
+          <div class="d-flex justify-content-end">
+            <span id="referralError" class="error mt-1 text-danger"
+              >* Select an option</span
+            >
+          </div>
         </div>
 
         <div>
@@ -293,8 +348,15 @@
               class="resdentialAddress form-control w-75"
             ></textarea>
           </div>
-          
         </div>
+      </section>
+
+      <section class="d-flex justify-content-around gap-5">
+        <button class="btn btn-outline-success px-5 py-2" type="submit">
+          Submit</button
+        ><button class="btn btn-outline-danger px-5 py-2" type="reset">
+          Clear
+        </button>
       </section>
     </form>
 
