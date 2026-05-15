@@ -20,7 +20,7 @@
   </head>
   <body class="bg-primary">
     <header
-      class="container bg-warning rounded-3 my-3 text-center text-white p-2"
+      class="container w-50 bg-warning rounded-3 my-3 text-center text-white p-2 "
     >
       <h2>Coaching Institute Registration Form</h2>
     </header>
@@ -87,14 +87,14 @@
           </div>
           <div class="d-flex justify-content-end">
             <span id="DOBError" class="error mt-1 text-danger"
-              >* You must be at least 15 years old</span
+              ></span
             >
           </div>
         </div>
 
         <div>
           <div class="d-flex align-items-center">
-            <label class="w-25" for="gender">Gender:</label>
+            <div class="w-25">Gender:</div>
             <div class="d-flex gap-4">
               <div>
                 <input
@@ -147,7 +147,7 @@
           <div class="d-flex align-items-center justify-content-between">
             <label for="qualification">Last Completed Qualification:</label>
             <select class="form-select w-75" id="qualification">
-              <option selected disabled>-- Select your Qualification --</option>
+              <option selected disabled value="">-- Select your Qualification --</option>
               <option value="10th">10th</option>
               <option value="12th">12th</option>
               <option value="Graduate">Graduate</option>
@@ -157,7 +157,7 @@
 
           <div class="d-flex justify-content-end">
             <span id="qualificationError" class="error mt-1 text-danger"
-              >* Please select a qualification</span
+              ></span
             >
           </div>
         </div>
@@ -174,7 +174,7 @@
           </div>
           <div class="d-flex justify-content-end">
             <span id="percentageError" class="error mt-1 text-danger"
-              >* Enter a valid percentage or grade</span
+              ></span
             >
           </div>
         </div>
@@ -189,7 +189,7 @@
           <div class="d-flex align-items-center justify-content-between">
             <label for="course">Preferred Course:</label>
             <select class="form-select w-75" id="course">
-              <option selected disabled>-- Select your Qualification --</option>
+              <option selected disabled value="">-- Select your Course --</option>
               <option value="IIT-JEE">IIT-JEE</option>
               <option value="NEET">NEET</option>
               <option value="BankingExams">Banking Exams</option>
@@ -198,25 +198,33 @@
           </div>
           <div class="d-flex justify-content-end">
             <span id="courseError" class="error mt-1 text-danger"
-              >* Select a course</span
+              ></span
             >
           </div>
         </div>
 
         <div>
-          <div class="d-flex align-items-center justify-content-between">
-            <label for="batch">Batch Timing Preference:</label>
-            <select class="form-select w-75" id="batch">
-              <option selected disabled>-- Select your Batch --</option>
-              <option value="Morning">Morning</option>
-              <option value="Afternoon">Afternoon</option>
-              <option value="Evening">Evening</option>
-              <option value="Weekend">Weekend</option>
-            </select>
+          <div class="d-flex align-items-center">
+           
+            <label class="w-25">Batch:</label>
+
+            <div class="d-flex gap-3">
+              <input type="checkbox" name="batch" id="Morning" value="Morning">
+             <label for="Morning">Morning</label>
+            <input type="checkbox" name="batch" id="Afternoon" value="Afternoon">
+                   <label for="Afternoon">Afternoon</label>
+            <input type="checkbox" name="batch" id="Evening" value="Evening">
+                   <label for="Evening">Evening</label>
+
+            <input type="checkbox" name="batch" id="Weekend" value="Weekend">
+                   <label for="Weekend">Weekend</label>
+
+            </div>
+
           </div>
           <div class="d-flex justify-content-end">
             <span id="batchError" class="error mt-1 text-danger"
-              >* Select a batch timing</span
+              ></span
             >
           </div>
         </div>
@@ -233,8 +241,8 @@
             ></textarea>
           </div>
           <div class="d-flex justify-content-end">
-            <span id="residentialAddressError" class="error mt-1 text-danger"
-              >* Enter your full address</span
+            <span id="addressError" class="error mt-1 text-danger"
+              ></span
             >
           </div>
         </div>
@@ -251,7 +259,7 @@
           </div>
           <div class="d-flex justify-content-end">
             <span id="cityError" class="error mt-1 text-danger"
-              >* Please enter a valid city name</span
+              ></span
             >
           </div>
         </div>
@@ -268,7 +276,7 @@
           </div>
           <div class="d-flex justify-content-end">
             <span id="pinCodeError" class="error mt-1 text-danger"
-              >* Enter a valid 6-digit pin code</span
+              ></span
             >
           </div>
         </div>
@@ -291,7 +299,7 @@
           </div>
           <div class="d-flex justify-content-end">
             <span id="guardianFullNameError" class="error mt-1 text-danger"
-              >* Enter guardian's full name</span
+              ></span
             >
           </div>
         </div>
@@ -310,7 +318,7 @@
           </div>
           <div class="d-flex justify-content-end">
             <span id="guardianContactNumberError" class="error mt-1 text-danger"
-              >* Enter a valid 10-digit contact number</span
+              ></span
             >
           </div>
         </div>
@@ -325,7 +333,7 @@
           <div class="d-flex align-items-center justify-content-between">
             <label for="referral">How did you hear about us?</label>
             <select class="form-select w-75" id="referral">
-              <option selected disabled>-- Select Sources --</option>
+              <option selected disabled value="">-- Select Sources --</option>
               <option value="Friends">Friends</option>
               <option value="OnlineAd">Online Ad</option>
               <option value="Newspaper">Newspaper</option>
@@ -335,7 +343,7 @@
           </div>
           <div class="d-flex justify-content-end">
             <span id="referralError" class="error mt-1 text-danger"
-              >* Select an option</span
+              ></span
             >
           </div>
         </div>
