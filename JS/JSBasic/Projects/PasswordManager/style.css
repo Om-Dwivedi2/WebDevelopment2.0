@@ -15,3 +15,34 @@ a:hover{
 text-decoration: underline !important;
 
 }
+
+.isDisabled {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+
+.inputCSS {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.inputCSS:focus,
+.inputCSS:focus-within {
+  border: 1px solid #9900ff;
+  outline: none;
+}
+
+.inputCSS input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+#password:hover{
+  background-color: #fff;
+}

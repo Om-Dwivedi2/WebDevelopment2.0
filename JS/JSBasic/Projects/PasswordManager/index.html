@@ -18,7 +18,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
   </head>
-  <body class="bg-bl ack">
+  <body class="bg-black">
     <header
       class="text-center text-white bg-primary text-white p-2 d-flex align-items-center justify-content-between px-5"
     >
@@ -34,7 +34,7 @@
     </header>
 
     <main>
-      <div class="w-50 mx-auto rounded mt-4 p-3 border">
+      <div class="w-50 mx-auto rounded mt-4 p-3 border bg-light">
         <form id="passForm" class="d-flex flex-column gap-3">
           <div>
             <input
@@ -42,14 +42,13 @@
               name="websiteName"
               id="websiteName"
               placeholder="Enter the Website Name"
-              class="form-control"
+              class="inputCSS"
             />
 
             <span
               class="error text-danger d-flex justify-content-end"
               id="websiteNameError"
-              ></span
-            >
+            ></span>
           </div>
           <div>
             <input
@@ -57,34 +56,43 @@
               name="userName"
               id="userName"
               placeholder="Enter the User Name"
-              class="form-control"
+              class="inputCSS"
             />
             <span
               class="error text-danger d-flex justify-content-end"
               id="userNameError"
-              ></span
-            >
+            ></span>
           </div>
           <div>
-            <input
-              type="text"
-              name="password"
-              id="password"
-              placeholder="Enter the Password"
-              class="form-control"
-            />
+            <div class="d-flex  align-items-center justify-content-between text-dark inputCSS bg-white">
+              <input
+                type="text"
+                name="password"
+                id="password"
+                placeholder="Enter the Password"
+                class="border-0"
+              />
+              <i id="eye" class="bi bi-eye-slash-fill"></i>
+            </div>
             <span
               class="error text-danger d-flex justify-content-end"
               id="passwordError"
-              ></span
-            >
+            ></span>
           </div>
 
           <div class="d-flex justify-content-around">
-            <button type="submit" class="btn btn-outline-success px-4 py-2">
+            <button
+              id="save"
+              type="submit"
+              class="btn btn-outline-success px-4 py-2"
+            >
               Save
             </button>
-            <button type="reset" class="btn btn-outline-danger px-4 py-2">
+            <button
+              id="clear"
+              type="reset"
+              class="btn btn-outline-danger px-4 py-2"
+            >
               Clear
             </button>
           </div>
