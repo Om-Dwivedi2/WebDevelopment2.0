@@ -1,0 +1,33 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "helvetica";
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+button {
+  padding: 15px;
+  background-color: red;
+  border-radius: 5px;
+  border: 0px;
+  font-size: larger;
+}
+
+button:hover {
+  transform: scale(0.95);
+}
