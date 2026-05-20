@@ -21,7 +21,7 @@ function viewSavedPassword() {
     TD3.innerText = `${element.password}`;
     BTN.innerText = "Remove";
     BTN.classList.add("btn", "btn-outline-danger");
-    
+
     BTN.addEventListener("click", () => {
       const data = JSON.parse(localStorage.getItem("PasswordManager")) || [];
       const newData = data.filter((e) => {
