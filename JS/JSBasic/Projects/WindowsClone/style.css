@@ -1,0 +1,72 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #212221 !important;
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  background-image: url(./asserts/wallpaper.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 92vh;
+
+  section {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 300px;
+    height: 40vh;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px) brightness(1.2);
+  }
+}
+
+footer {
+  height: 8vh;
+  position: sticky;
+  bottom: 0px;
+
+  div,
+  section {
+    height: 95%;
+  }
+
+  img {
+    height: 100%;
+  }
+
+  #searchBar {
+    background-color: #404242;
+    border: 1px solid #b0acac;
+
+    input {
+      background-color: transparent;
+      border: 0px;
+    }
+
+    input:focus {
+      outline: 0px;
+    }
+  }
+
+  .icon {
+    padding: 5px;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+
+  .icon:hover {
+    background-color: #2b2d2e;
+  }
+}
+
+.hidden {
+  display: none;
+}
