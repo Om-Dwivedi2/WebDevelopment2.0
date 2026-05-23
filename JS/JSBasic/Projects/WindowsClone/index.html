@@ -15,7 +15,7 @@
 
     <link
       rel="shortcut icon"
-      href="https://static.vecteezy.com/system/resources/previews/021/514/979/non_2x/windows-symbol-brand-logo-blue-design-microsoft-software-illustration-free-vector.jpg"
+      href="./asserts/fevicon.png"
       type="image/x-icon"
     />
     <link
@@ -25,56 +25,70 @@
   </head>
   <body>
     <main>
-      <section id="menu" class="text-white rounded-4 p-3 fs-6 hidden">
-        <div class="d-grid gap-2">
-          <div class="d-flex align-items-center gap-3 options">
+      <section id="menu" class="text-white rounded-4 py-3 px-2 fs-6 hidden">
+        <div class="d-grid gap-1">
+          <button class="d-flex align-items-center gap-3 options">
             <i class="bi bi-grid"></i>
             <span>View</span>
-          </div>
-          <div class="d-flex align-items-center gap-3 options">
+          </button>
+          <button class="d-flex align-items-center gap-3 options">
             <i class="bi bi-arrow-down-up"></i>
             <span>Sort By</span>
-          </div>
-          <div class="d-flex align-items-center gap-3 options">
+          </button>
+          <button class="d-flex align-items-center gap-3 options" id="refresh">
             <i class="bi bi-arrow-clockwise"></i>
             <span>Refresh</span>
-          </div>
-          <div class="d-flex align-items-center gap-3 options">
+          </button>
+          <hr class="my-1 p-0" />
+          <button class="d-flex align-items-center gap-3 options">
             <i class="bi bi-arrow-counterclockwise"></i>
             <span>Undo Delete</span>
-          </div>
-          <div class="d-flex align-items-center gap-3 options">
+          </button>
+          <button class="d-flex align-items-center gap-3 options">
             <i class="bi bi-plus-circle"></i>
             <span>New</span>
-          </div>
-          <div class="d-flex align-items-center gap-3 options">
+          </button>
+          <hr class="my-1 p-0" />
+
+          <button class="d-flex align-items-center gap-3 options">
             <i class="bi bi-display"></i>
             <span>Display Settings</span>
-          </div>
-          <div class="d-flex align-items-center gap-3 options">
+          </button>
+          <button class="d-flex align-items-center gap-3 options">
             <i class="bi bi-pencil"></i>
             <span>Personalize</span>
-          </div>
-          <div class="d-flex align-items-center gap-3 options">
+          </button>
+          <hr class="my-1 p-0" />
+
+          <button class="d-flex align-items-center gap-3 options">
             <i class="bi bi-terminal"></i>
             <span>Open in Terminal</span>
-          </div>
-          <div class="d-flex align-items-center gap-3 options">
+          </button>
+          <hr class="my-1 p-0" />
+
+          <button class="d-flex align-items-center gap-3 options">
             <i class="bi bi-box-arrow-up-right"></i>
             <span>Show more Options</span>
-          </div>
+          </button>
         </div>
       </section>
     </main>
 
-    <footer class="p-2 d-flex align-items-center justify-content-between">
+    <footer class="p-2 px-3 d-flex align-items-center justify-content-between">
       <section>
-        <div class="icon d-flex align-items-center">
-          <img src="./asserts/weather.png" />
+        <div class="icon d-flex align-items-center gap-3">
+          <div><i class="bi bi-cloud-sun-fill"></i></div>
+          <div class="d-flex flex-column justify-content-center">
+            <div id="temperature"></div>
+            <div id="wheather">Sunny</div>
+          </div>
         </div>
       </section>
-      <section class="d-flex align-items-center gap-1">
-        <img src="./asserts/windows.png" />
+      <section class="d-flex align-items-center gap-3">
+        <div class="icon d-flex align-items-center">
+          <img src="./asserts/windows.png" />
+        </div>
+
         <div
           class="d-flex align-items-center justify-content-center px-3 py-0 rounded-5 gap-2"
           id="searchBar"
@@ -98,7 +112,7 @@
           <img src="./asserts/edge.png" />
         </div>
         <div class="icon d-flex align-items-center">
-          <img src="./asserts/comet.png" />
+          <img src="./asserts/vscode.png" />
         </div>
         <div class="icon d-flex align-items-center">
           <img src="./asserts/fileExplorer.png" />
@@ -109,8 +123,12 @@
         <div class="icon d-flex align-items-center">
           <img src="./asserts/wifi.png" />
         </div>
-        <div class="icon d-flex align-items-center">
-          <img src="./asserts/date.png" />
+        <div
+          id="datetime-container"
+          class="icon d-flex flex-column align-items-end justify-content-center text-white px-3"
+        >
+          <div id="time"></div>
+          <div id="date"></div>
         </div>
       </section>
     </footer>
