@@ -65,9 +65,9 @@ setInterval(() => {
   document.getElementById("time").innerText = time;
 }, 1000);
 
-// Wheather
+// weather
 
-async function wheather(city) {
+async function weather(city) {
   try {
     const apikey = "0d8d7097e15a1d2ec401314b070e3b75";
     const raw = await fetch(
@@ -85,7 +85,7 @@ async function wheather(city) {
     document.getElementById("temperature").innerText =
       Number(temp).toFixed(0) + "°C";
 
-    document.getElementById("wheather").innerText = data.weather[0].main;
+    document.getElementById("weather").innerText = data.weather[0].main;
 
     console.log(data);
   } catch (error) {
@@ -93,4 +93,4 @@ async function wheather(city) {
   }
 }
 
-wheather("bhopal");
+weather("bhopal");
