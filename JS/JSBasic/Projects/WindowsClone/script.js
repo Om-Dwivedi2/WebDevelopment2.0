@@ -65,7 +65,7 @@ setInterval(() => {
   document.getElementById("time").innerText = time;
 }, 1000);
 
-// weather
+// Weather
 
 async function weather(city) {
   try {
@@ -86,7 +86,7 @@ async function weather(city) {
       Number(temp).toFixed(0) + "°C";
 
     document.getElementById("weather").innerText = data.weather[0].main;
-
+    document.getElementById("weatherImage").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
     console.log(data);
   } catch (error) {
     console.log(error);
