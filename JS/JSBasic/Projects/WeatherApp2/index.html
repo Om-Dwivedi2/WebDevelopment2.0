@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body >
+    <main class="weather-app container-fluid py-4">
+      <section class="dashboard-container mx-auto">
+        <div class="row g-0">
+          <!-- LEFT PANEL -->
+          <aside class="col-lg-4 col-xl-3 weather-sidebar">
+            <div class="sidebar-content">
+              <!-- Search -->
+              <form class="search-box" role="search">
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent border-0">
+                    <i class="bi bi-search"></i>
+                  </span>
+
+                  <input
+                    type="search"
+                    class="form-control border-0 shadow-none"
+                    placeholder="Search for places..."
+                    aria-label="Search city"
+                  />
+                </div>
+              </form>
+
+              <!-- Weather Icon -->
+              <div class="weather-hero text-center">
+                <img
+                  src="images/weather-main.png"
+                  alt="Mostly cloudy weather icon"
+                  class="img-fluid weather-main-icon"
+                />
+              </div>
+
+              <!-- Temperature -->
+              <section class="temperature-section">
+                <h1 class="temperature-value">12<span>°C</span></h1>
+
+                <p class="day-time">Monday, <span>16:00</span></p>
+              </section>
+
+              <hr />
+
+              <!-- Weather Details -->
+              <section class="weather-details">
+                <div class="detail-item">
+                  <i class="bi bi-cloud"></i>
+
+                  <span>Mostly Cloudy</span>
+                </div>
+
+                <div class="detail-item">
+                  <i class="bi bi-moisture"></i>
+
+                  <span>Rain - 30%</span>
+                </div>
+              </section>
+
+              <!-- City Card -->
+              <section class="location-card">
+                <img src="images/new-york.jpg" alt="New York skyline" />
+
+                <div class="location-overlay">
+                  <h2>New York, NY, USA</h2>
+                </div>
+              </section>
+            </div>
+          </aside>
+
+          <!-- RIGHT PANEL -->
+          <section class="col-lg-8 col-xl-9 weather-main">
+            <div class="main-content">
+              <header class="mb-4">
+                <h2 class="dashboard-heading">Today's Highlights</h2>
+              </header>
+
+              <div class="row g-4">
+                <!-- UV INDEX -->
+                <article class="col-md-6 col-xl-4">
+                  <div class="weather-card h-100">
+                    <h3>UV Index</h3>
+
+                    <div class="uv-wrapper">
+                      <div class="uv-arc"></div>
+
+                      <div class="uv-number">5</div>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- WIND -->
+                <article class="col-md-6 col-xl-4">
+                  <div class="weather-card h-100">
+                    <h3>Wind Status</h3>
+
+                    <div class="big-number">
+                      7.70
+                      <small>km/h</small>
+                    </div>
+
+                    <div class="status-pill">
+                      <span class="dot"></span>
+                      WSW
+                    </div>
+                  </div>
+                </article>
+
+                <!-- SUNRISE -->
+                <article class="col-md-6 col-xl-4">
+                  <div class="weather-card h-100">
+                    <h3>Sunrise & Sunset</h3>
+
+                    <div class="sun-item">
+                      <div class="sun-icon">↑</div>
+
+                      <div>
+                        <strong>6:35 AM</strong>
+                        <small>-1m 46s</small>
+                      </div>
+                    </div>
+
+                    <div class="sun-item">
+                      <div class="sun-icon">↓</div>
+
+                      <div>
+                        <strong>5:42 PM</strong>
+                        <small>+2m 22s</small>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- HUMIDITY -->
+                <article class="col-md-6 col-xl-4">
+                  <div class="weather-card h-100">
+                    <h3>Humidity</h3>
+
+                    <div class="big-number">12%</div>
+
+                    <p class="status-text">Normal 👍🏻</p>
+                  </div>
+                </article>
+
+                <!-- VISIBILITY -->
+                <article class="col-md-6 col-xl-4">
+                  <div class="weather-card h-100">
+                    <h3>Visibility</h3>
+
+                    <div class="big-number">
+                      5.2
+                      <small>km</small>
+                    </div>
+
+                    <p class="status-text">Average 🙂</p>
+                  </div>
+                </article>
+
+                <!-- AIR QUALITY -->
+                <article class="col-md-6 col-xl-4">
+                  <div class="weather-card h-100">
+                    <h3>Air Quality</h3>
+
+                    <div class="big-number">105</div>
+
+                    <p class="status-text">Unhealthy 👎🏻</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

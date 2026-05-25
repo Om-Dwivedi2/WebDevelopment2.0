@@ -15,14 +15,23 @@ body {
   color: #69768d !important;
 }
 
-img {
+img{
   width: 100px;
 }
 
-main {
-  background: #091f43 !important;
+main{
+  background: #091F43 !important;
 }
 
-#countryDiv {
-  font-size: small;
+#place{
+
+
+
+  #countryDiv{
+    position: absolute;
+    top: -5px;
+    left: 60px;
+    font-size: small;
+  }
+
 }
