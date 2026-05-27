@@ -26,6 +26,11 @@ body {
   height: 56px;
 }
 
+.disableBtn {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
 #resultCard {
   background: #f8f9fa;
   border-radius: 20px;

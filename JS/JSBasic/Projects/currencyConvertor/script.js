@@ -78,6 +78,12 @@ document.getElementById("convertBtn").addEventListener("click", async () => {
     return;
   }
 
+  // Loading Effect
+  document.getElementById("convertBtn").innerText = `Loading...`;
+  document.getElementById("convertBtn").classList.add("disableBtn");
+  document.getElementById("loader").classList.remove("d-none");
+
+
   const response = await fetch(
     `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurrencyCode}.json`,
   );
@@ -98,6 +104,13 @@ document.getElementById("convertBtn").addEventListener("click", async () => {
     `${(amount * rate).toFixed(2)} ${toCurrencyCode.toUpperCase()}`;
   document.getElementById("exchangeRate").innerText =
     `1 ${fromCurrencyCode.toUpperCase()} = ${rate.toFixed(2)} ${toCurrencyCode.toUpperCase()}`;
+
+  // Loading Effect
+  document.getElementById("convertBtn").innerText = `Convert Currency`;
+  document.getElementById("convertBtn").classList.remove("disableBtn");
+  document.getElementById("loader").classList.add("d-none");
+
+
 });
 
 document.getElementById("swapBtn").addEventListener("click", () => {
@@ -107,7 +120,18 @@ document.getElementById("swapBtn").addEventListener("click", () => {
   const fromFlag = document.getElementById("fromFlag");
   const toFlag = document.getElementById("toFlag");
 
+  for (const element of fromCountry.options) {
+    if (element.value == toCountry.value) {
+      element.selected = true;
+    }
+  }
 
+  for (const element of toCountry.options) {
+    if (element.value == temp) {
+      element.selected = true;
+    }
+  }
 
-
+  fromFlag.src = `https://flagsapi.com/${document.getElementById("fromCountry").value.split(",")[1]}/flat/64.png`;
+  toFlag.src = `https://flagsapi.com/${document.getElementById("toCountry").value.split(",")[1]}/flat/64.png`;
 });
