@@ -14,7 +14,7 @@ const App = () => {
 
     data.length == 0
       ? setData([{ name, email, phone, file }])
-      : setData([...data, { name, email, phone, file }]);
+      : setData([...data, { name, email, phone, file}]);
 
     console.log(data);
 
@@ -25,86 +25,102 @@ const App = () => {
   }
 
   return (
-    <main className="bg-bl ack h-screen flex items-center justify-center">
-      <form
-        className="flex flex-col gap-6"
-        onSubmit={(e) => {
-          formSubmit(e);
-        }}
-      >
-        <div className="flex gap-4">
-          <input
-            type="text"
-            placeholder="Enter Name"
-            className="border p-2 bg-white w-full"
-            value={name}
-            required
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-          />
-
-          <input
-            type="email"
-            placeholder="Enter Email"
-            className="border p-2 bg-white w-full"
-            value={email}
-            required
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
-        </div>
-
-        <div className="flex gap-4">
-          <input
-            type="tel"
-            placeholder="Enter Phone Number"
-            className="border p-2 bg-white w-full"
-            value={phone}
-            required
-            onChange={(e) => {
-              setPhone(e.target.value);
-              console.log(typeof phone);
-            }}
-          />
-
-          <button
-            placeholder="Select File"
-            className="border p-2 bg-white w-full flex"
-          >
-            <label id="fileLabel" htmlFor="file" className=" text-gray-400 ">
-              {document.getElementById("fileLabel").innerText == ""
-                ? "Choose file"
-                : ""}
-            </label>
+    <main className="bg-black h-screen">
+      <section className=" pt-20 flex items-center justify-center">
+        <form
+          className="flex flex-col gap-6"
+          onSubmit={(e) => {
+            formSubmit(e);
+          }}
+        >
+          <header className="bg-blue-500 text-center text-2xl text-white py-2 ">
+            Contact List
+          </header>
+          <div className="flex gap-4">
             <input
-              type="file"
-              name="file"
-              id="file"
-              className="opacity-0 w-full"
-              value={file}
+              type="text"
+              placeholder="Enter Name"
+              className="border p-2 bg-white w-full"
+              value={name}
+              required
               onChange={(e) => {
-                setFile(e.target.value);
+                setName(e.target.value);
               }}
             />
-          </button>
-        </div>
 
-        <button type="submit" className="bg-green-500 text-white px-4 py-2">
-          Submit
-        </button>
-      </form>
+            <input
+              type="email"
+              placeholder="Enter Email"
+              className="border p-2 bg-white w-full"
+              value={email}
+              required
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+          </div>
 
-      {/* <div>
-        {data.map((e) => {
-          return (
-            <div className="flex gap-10 text-red-500 ">
-              <div>{e.name}</div>
+          <div className="flex gap-4">
+            <input
+              type="tel"
+              placeholder="Enter Phone Number"
+              className="border p-2 bg-white w-full"
+              value={phone}
+              required
+              onChange={(e) => {
+                setPhone(e.target.value);
+              }}
+            />
+
+            <div
+              placeholder="Select File"
+              className="border p-2 bg-white w-full flex"
+            >
+              <label
+                
+                htmlFor="file"
+                className="text-start text-gray-400 w-full"
+              >
+                Choose file
+              </label>
+              <input
+                type="file"
+                name="file"
+                id="file"
+                className="opacity-0 w-[50%]"
+                
+                onChange={(e) => {
+                  setFile(URL.createObjectURL(e.target.files[0]));
+                  
+                  
+                }}
+              />
             </div>
-          );
-        })}
-      </div> */}
+          </div>
+
+          <button
+            type="submit"
+            className="bg-green-500 text-white px-4 py-2 text-2xl"
+          >
+            Submit
+          </button>
+        </form>
+      </section>
+      <section className=" p-20 flex justify-center  ">
+        <div className="bg-gray-200 grid grid-cols-4 w-[75%] p-10 gap-5">
+          {data.map((e, inx) => {
+            return (
+              <Card
+                key={inx}
+                profile={e.file}
+                name={e.name}
+                phone={e.phone}
+                email={e.email}
+              />
+            );
+          })}
+        </div>
+      </section>
     </main>
   );
 };

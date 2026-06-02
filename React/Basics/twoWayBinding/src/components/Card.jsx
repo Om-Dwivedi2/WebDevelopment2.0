@@ -2,49 +2,40 @@ import React from "react";
 
 const Card = (props) => {
   return (
-    <div className="border border-gray-400 p-1.5 rounded-3xl bg-white h-auto">
+    <div className="bg-white border border-gray-300 rounded-2xl overflow-hidden">
       <header
-        className=" bg-cover h-25 rounded-3xl relative"
+        className="h-20 bg-cover bg-center relative"
         style={{
-          backgroundImage: url("https://i.sstatic.net/bkC9s.jpg")
+          backgroundImage: `url("https://i.sstatic.net/bkC9s.jpg")`,
         }}
       >
-        
-
-        <div className="rounded-full p-1 w-[30%] absolute bg-white top-1/2 left-1/2 -translate-x-1/2 translate-y-1/4 min-w-17.5 max-w-30">
+        <div className="absolute left-1/2 top-full -translate-x-1/2 -translate-y-1/2 bg-white p-1 rounded-full">
           <img
-            src={`${props.profile}`}
-            className="w-full h-full rounded-full "
+            src={props.profile}
             alt=""
+            className="w-16 h-16 rounded-full object-cover border border-gray-300"
           />
         </div>
       </header>
-      <div className="text-center px-3">
-        <div className="text-2xl mt-15 font-semibold">{props.name}</div>
-        <p className="text-gray-500 mt-2 px-4">
-         {props.phone}
-        </p>
-      </div>
 
-      <div className="bg-[#F5F5F5] border border-gray-300 rounded-2xl grid grid-cols-3 text-center mt-4 px-3">
-        <div>
-          <div className="font-semibold">2.1K</div>
-          <p className="text-gray-500">Likes</p>
-        </div>
-        <div>
-          <div className="font-semibold">213</div>
-          <p className="text-gray-500">Posts</p>
-        </div>
-        <div>
-          <div className="font-semibold">301.3K</div>
-          <p className="text-gray-500">Views</p>
-        </div>
-      </div>
+      <div className="pt-10 px-4 pb-4">
+        <h2 className="text-lg font-semibold text-center text-gray-800">
+          {props.name}
+        </h2>
 
-      <div className="flex justify-center gap-6 my-2">
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-twitter-x"></i>
-        <i class="bi bi-threads"></i>
+        <div className="mt-4 space-y-2">
+          <div className="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-lg px-3 py-2">
+            <span className="text-sm text-gray-500">Phone</span>
+            <span className="text-sm font-medium text-gray-800">
+              {props.phone}
+            </span>
+          </div>
+
+          <div className="bg-gray-50 border border-gray-200 rounded-lg px-3 py-2">
+            <div className="text-sm text-gray-500 mb-1">Email</div>
+            <div className="text-sm text-gray-800">{props.email}</div>
+          </div>
+        </div>
       </div>
     </div>
   );
