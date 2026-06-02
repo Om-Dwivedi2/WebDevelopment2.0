@@ -14,7 +14,7 @@ const App = () => {
 
     data.length == 0
       ? setData([{ name, email, phone, file }])
-      : setData([...data, { name, email, phone, file}]);
+      : setData([...data, { name, email, phone, file }]);
 
     console.log(data);
 
@@ -25,7 +25,7 @@ const App = () => {
   }
 
   return (
-    <main className="bg-black h-screen">
+    <main className="">
       <section className=" pt-20 flex items-center justify-center">
         <form
           className="flex flex-col gap-6"
@@ -76,23 +76,16 @@ const App = () => {
               placeholder="Select File"
               className="border p-2 bg-white w-full flex"
             >
-              <label
-                
-                htmlFor="file"
-                className="text-start text-gray-400 w-full"
-              >
-                Choose file
+              <label htmlFor="file" className="text-start text-gray-400 w-full">
+                {file === "" ? "Choose file" : "File Selected:-" }
               </label>
               <input
                 type="file"
                 name="file"
                 id="file"
                 className="opacity-0 w-[50%]"
-                
                 onChange={(e) => {
                   setFile(URL.createObjectURL(e.target.files[0]));
-                  
-                  
                 }}
               />
             </div>
@@ -106,12 +99,15 @@ const App = () => {
           </button>
         </form>
       </section>
-      <section className=" p-20 flex justify-center  ">
-        <div className="bg-gray-200 grid grid-cols-4 w-[75%] p-10 gap-5">
+      <section className=" py-20 flex justify-center  ">
+        <div className="bg-gray-200 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 w-[75%] p-10 gap-5">
           {data.map((e, inx) => {
             return (
               <Card
                 key={inx}
+                position = {inx}
+                userData={data}
+                setUserData={setData}
                 profile={e.file}
                 name={e.name}
                 phone={e.phone}

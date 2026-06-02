@@ -1,6 +1,22 @@
 import React from "react";
 
 const Card = (props) => {
+
+    function remove() {
+      let copyData = [...props.userData]
+    
+      console.log(props.index);
+      
+
+      copyData.splice(props.position,1);
+
+      props.setUserData(copyData)
+
+      
+    }
+
+
+
   return (
     <div className="bg-white border border-gray-300 rounded-2xl overflow-hidden">
       <header
@@ -23,7 +39,7 @@ const Card = (props) => {
           {props.name}
         </h2>
 
-        <div className="mt-4 space-y-2">
+        <div className="mt-4 flex flex-col gap-2">
           <div className="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-lg px-3 py-2">
             <span className="text-sm text-gray-500">Phone</span>
             <span className="text-sm font-medium text-gray-800">
@@ -35,6 +51,15 @@ const Card = (props) => {
             <div className="text-sm text-gray-500 mb-1">Email</div>
             <div className="text-sm text-gray-800">{props.email}</div>
           </div>
+
+          <button
+            onClick={() => {
+              remove();
+            }}
+            className="bg-red-500 rounded px-3 py-1 text-lg text-white mx-auto"
+          >
+            Remove
+          </button>
         </div>
       </div>
     </div>
