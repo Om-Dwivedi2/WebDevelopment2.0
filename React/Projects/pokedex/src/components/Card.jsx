@@ -107,7 +107,7 @@ const Card = (props) => {
 
         {buttonList.map((Element, inx) => {
           if (Element.name == active) {
-            return <Element.component key={inx} />;
+            return <Element.component key={inx} data={props.data}/>;
           }
         })}
       </div>

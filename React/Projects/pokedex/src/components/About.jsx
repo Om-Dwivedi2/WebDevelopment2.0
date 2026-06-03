@@ -1,6 +1,6 @@
 import React from 'react'
 
-const About = () => {
+const About = (props) => {
   return (
     <div>
       <div className="space-y-2">
@@ -11,17 +11,17 @@ const About = () => {
 
         <div className="flex">
           <span className="w-28 text-gray-400">Height</span>
-          <span>23.6" (0.70 cm)</span>
+          <span>  ({props.data.height/10} m)</span>
         </div>
 
         <div className="flex">
           <span className="w-28 text-gray-400">Weight</span>
-          <span>15.2 lbs (6.9 kg)</span>
+          <span>{(props.data.weight*0.2204).toFixed(2)} lbs ({props.data.weight/10} kg)</span>
         </div>
 
         <div className="flex">
           <span className="w-28 text-gray-400">Abilities</span>
-          <span>Overgrow, Chlorophyll</span>
+          <span>{props.data.abilities[0].ability.name}, {props.data.abilities[1].ability.name}</span>
         </div>
       </div>
 
