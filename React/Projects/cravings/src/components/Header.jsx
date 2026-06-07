@@ -15,7 +15,7 @@ const Header = () => {
             Login
           </Link>
           <Link
-            to={"register"}
+            to={"/register"}
             className="hover:bg-white border border-white hover:text-orange-600 rounded px-2 py-1"
           >
             Register
