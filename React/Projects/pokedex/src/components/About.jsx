@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CreatApiContext } from '../context/ApiContext'
 
 const About = (props) => {
+
+const data = useContext(CreatApiContext)
+
+
   return (
     <div>
       <div className="space-y-2">
         <div className="flex">
           <span className="w-28 text-gray-400">Species</span>
-          <span>Seed</span>
+          <span>seed</span>
         </div>
 
         <div className="flex">

@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import BaseStats from "./BaseStats";
 import Evolution from "./Evolution";
 import About from "./About";
+import { CreatApiContext } from "../context/ApiContext";
 
 const Card = (props) => {
+  const apiData = useContext(CreatApiContext);
+console.log(apiData[0].name);
+
   const buttonList = [
     { name: "About", component: About },
     { name: "BaseStats", component: BaseStats },
@@ -12,7 +16,6 @@ const Card = (props) => {
   const [active, setActive] = useState("About");
 
   console.log(props.data.types);
-  
 
   return (
     <div className="w-96 overflow-hidden rounded-3xl bg-teal-400 shadow-lg">
@@ -20,25 +23,27 @@ const Card = (props) => {
       <div className="relative px-6 pt-5 pb-20 text-white">
         <div className="flex justify-between">
           <div>
-            <h2 className="text-3xl font-bold capitalize">{props.data.name}</h2>
+            <h2 className="text-3xl font-bold capitalize">{apiData[0].name}</h2>
 
             <div className="mt-2 flex gap-2">
               <span className="rounded-full bg-white/20 px-3 py-1 text-sm">
-                {props.data.types[0].type.name}
+                {apiData[0].types[0].type.name}
               </span>
               <span className="rounded-full bg-white/20 px-3 py-1 text-sm">
-                { props.data.types.length < 2 ? "" : props.data.types[1].type.name}
+                {apiData[0].types.length < 2
+                  ? ""
+                  : apiData[0].types[1].type.name}
               </span>
             </div>
           </div>
 
           <span className="text-sm font-semibold">
-            #{props.data.id.toString().padStart(3, "0")}
+            #{apiData[0].id.toString().padStart(3, "0")}
           </span>
         </div>
 
         <img
-          src={props.data.sprites.other["official-artwork"].front_default}
+          src={apiData[0].sprites.other["official-artwork"].front_default}
           alt="Bulbasaur"
           className="absolute left-1/2 bottom-0 w-40 -translate-x-1/2 translate-y-1/2"
         />
@@ -107,7 +112,7 @@ const Card = (props) => {
 
         {buttonList.map((Element, inx) => {
           if (Element.name == active) {
-            return <Element.component key={inx} data={props.data}/>;
+            return <Element.component key={inx} data={props.data} />;
           }
         })}
       </div>
