@@ -50,6 +50,8 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Featured Restaurants */}
+
       <section className="px-10 md:px-20 lg:px-60 py-5 bg-(--color-base-200)">
         <div className="my-4 space-y-2">
           <div className="flex gap-2 items-center">
@@ -195,6 +197,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+
+
     </>
   );
 };
