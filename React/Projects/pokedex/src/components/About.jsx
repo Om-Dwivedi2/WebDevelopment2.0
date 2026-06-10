@@ -1,10 +1,9 @@
-import React, { useContext } from 'react'
-import { CreatApiContext } from '../context/ApiContext'
+
+import React, { useContext } from "react";
+
 
 const About = (props) => {
-
-const data = useContext(CreatApiContext)
-
+ 
 
   return (
     <div>
@@ -16,17 +15,23 @@ const data = useContext(CreatApiContext)
 
         <div className="flex">
           <span className="w-28 text-gray-400">Height</span>
-          <span>  ({props.data.height/10} m)</span>
+          <span> ({props.data.PokemonGeneralData.height / 10} m)</span>
         </div>
 
         <div className="flex">
           <span className="w-28 text-gray-400">Weight</span>
-          <span>{(props.data.weight*0.2204).toFixed(2)} lbs ({props.data.weight/10} kg)</span>
+          <span>
+            {(props.data.PokemonGeneralData.weight * 0.2204).toFixed(2)} lbs (
+            {props.data.PokemonGeneralData.weight / 10} kg)
+          </span>
         </div>
 
         <div className="flex">
           <span className="w-28 text-gray-400">Abilities</span>
-          <span>{props.data.abilities[0].ability.name}, {props.data.abilities[1].ability.name}</span>
+          <span>
+            {props.data.PokemonGeneralData.abilities[0].ability.name},{" "}
+            {props.data.PokemonGeneralData.abilities[1].ability.name}
+          </span>
         </div>
       </div>
 
@@ -49,7 +54,7 @@ const data = useContext(CreatApiContext)
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
