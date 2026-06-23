@@ -1,9 +1,12 @@
 import app from "./src/app.js";
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-function connectDB() {
-  mongoose
-  .connect("mongodb://localhost:27017/day5")
+dotenv.config()
+
+async function connectDB() {
+  await mongoose
+  .connect(process.env.MongoDB_URI)
   .then(console.log("Database is connected with server"));
 }
 

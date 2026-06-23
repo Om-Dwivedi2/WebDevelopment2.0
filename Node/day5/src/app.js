@@ -28,4 +28,6 @@ app.patch("/user/:index", (req, res) => {
   res.status(201).json("data updated successfully with status code 201");
 });
 
+
+
 export default app;

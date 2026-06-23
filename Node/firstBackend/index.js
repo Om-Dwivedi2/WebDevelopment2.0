@@ -1,9 +1,16 @@
 import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
+import authRouter from "./src/routers/auth.route.js";
+import publicRouter from "./src/routers/public.route.js";
+
 
 // initialized the server
 const app = express();
+
+app.use("/auth", authRouter);
+app.use("/public", publicRouter);
+
 
 // API 
 app.get("/", (req, res) => {
