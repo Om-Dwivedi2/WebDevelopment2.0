@@ -20,6 +20,11 @@ const registerSchema = new mongoose.Schema(
       required: true,
     },
 
+    photo: {
+      url: { type: String },
+      publicId: { type: String },
+    },
+
     password: {
       type: String,
       required: true,
@@ -34,5 +39,5 @@ const registerSchema = new mongoose.Schema(
   },
 );
 
-const User = mongoose.model( "user",registerSchema);
+const User = mongoose.model("user", registerSchema);
 export default User;

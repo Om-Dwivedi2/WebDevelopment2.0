@@ -9,6 +9,14 @@ const app = express();
 app.use(express.json());
 app.use("/auth", router);
 
+// Default Error Handler
+app.use((err, req, res, next) => {
+  const ErrMessage = err.message || "Internal Server Error";
+  const ErrStatusCode = err.statusCode || 500;
+
+  res.statusCode(ErrStatusCode)
+});
+
 // PORT
 const port = process.env.PORT || 5000;
 

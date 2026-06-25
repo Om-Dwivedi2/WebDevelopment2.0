@@ -15,7 +15,7 @@ export const postUserNote = async (req, res) => {
 };
 
 export const deleteUserNote = async (req, res) => {
-  const {id} = req.body;
+  const id = req.query;
 
   try {
     const data = await notes.findByIdAndDelete(id);
