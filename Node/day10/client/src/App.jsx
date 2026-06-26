@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Card from "./components/Card";
 import axios from "axios";
 import { fetchNotes } from "./api/fetchApi";
+import { CardDataContext } from "./context/CardContext";
 
 const App = () => {
   const [formData, setFormData] = useState({ title: "", description: "" });
-  const [cardData, setCardData] = useState([]);
+ 
+
+  const [cardData, setCardData] = useContext(CardDataContext);
 
   function handleChange(e) {
     setFormData((prev) => ({
@@ -106,7 +109,7 @@ const App = () => {
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-5 py-5">
           {cardData.map((e) => {
             return (
-              <Card key={e.id} title={e.title} description={e.description} />
+              <Card id={e._id} title={e.title} description={e.description} />
             );
           })}
         </div>

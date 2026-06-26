@@ -1,21 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import axios from "axios";
+import { CardDataContext } from "../context/CardContext";
+import { fetchNotes } from "../api/fetchApi";
 
 const Card = (props) => {
-  async function deleteCard() {
-    const deleteData = await axios.delete(
-      `http://localhost:4500/user/notes/${props.key}`,
-    );
-    fetchNotes();
-    console.log(deleteData);
-  }
+  const [cardData, setCardData] = useContext(CardDataContext);
 
-  async function fetchNotes() {
-    const res = await axios.get("http://localhost:4500/user/notes");
-    setCardData(res.data.data);
-    console.log(res);
+  async function deleteCard() {
+    console.log("function entered");
+    console.log(cardData);
+
+    console.log(props.id);
+
+    const deleteData = await axios.delete("http://localhost:4500/user/notes", {
+      id: props.id,
+    });
+
+    const newData = await fetchNotes();
+    console.log(newData);
+
+    setCardData(newData);
+
+    console.log(deleteData);
   }
 
   return (
@@ -30,8 +38,9 @@ const Card = (props) => {
           </button>
           <button
             className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-red-600 border border-red-500 rounded-lg bg-red-50 transition-all duration-100 active:scale-95"
-            onClick={() => {
-              deleteCard();
+            onClick={async () => {
+              console.log("hello");
+              await deleteCard();
             }}
           >
             <MdDelete className="text-lg" /> Delete

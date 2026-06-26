@@ -15,10 +15,17 @@ export const postUserNote = async (req, res) => {
 };
 
 export const deleteUserNote = async (req, res) => {
-  const id = req.query;
+  console.log("0");
+console.log("req.body: ", req.body);
+
+  const { id } = req.body;
+
+  console.log("id: ", id);
 
   try {
     const data = await notes.findByIdAndDelete(id);
+    console.log("data of deleted: ", data);
+
     if (!data) {
       console.log("No data foud with given id");
     } else {
