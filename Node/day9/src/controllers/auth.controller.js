@@ -5,14 +5,19 @@ export const registerUser = async (req, res, next) => {
     const { fullName, email, phone, gender, password, dob } = req.body;
 
     if (!fullName || !email || !phone || !gender || !password || !dob) {
-      res.status(400).json("Fill all entries");
-      return;
+      const error = new Error("Fill all entries: ");
+      error.statusCode = 400;
+      return next(error);
     }
 
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      res.status(409).json("User Already exist");
-      return;
+      // res.status(409).json("User Already exist");
+      // return;
+
+      const error = new Error("User already exist");
+      error.statusCode = 409;
+      return next(error);
     }
 
     const photoUrl = `https://placehold.co/600x400?text=${fullName.charAt(0).toUpperCase()}`;
@@ -32,7 +37,8 @@ export const registerUser = async (req, res, next) => {
     });
     res.status(201).json({ message: "User created successfully" });
   } catch (error) {
-    res.status(500).json({ message: "Internal Server Error" });
+    console.log(error.message);
+    next();
   }
 };
 
@@ -42,4 +48,35 @@ export const getRegisterUser = async (req, res) => {
   res
     .status(200)
     .json({ message: "Registered data retrieved successfully", data: data });
+};
+
+export const LoginUser = async (req, res, next) => {
+  const { email, password } = req.body;
+
+  try {
+    if (!email || !password) {
+      const error = new Error("All Field Required");
+      error.statusCode = 400;
+      return next(error);
+    }
+
+    const existingUser = User.find({ email });
+
+    if (!existingUser) {
+      const error = new Error("User is not registered");
+      error.statusCode = 404;
+      return next(error);
+    }
+
+    if (existingUser.password != password) {
+      const error = new Error("Password entered is incorrect");
+      error.statusCode = 401;
+      return next(error);
+    }
+
+    res.status(200).json({ message: "Welcome Back", data: existingUser });
+  } catch (error) {
+    console.log(error.message);
+    next();
+  }
 };

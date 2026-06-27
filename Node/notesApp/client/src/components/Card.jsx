@@ -15,7 +15,7 @@ const Card = (props) => {
     console.log(props.id);
 
     const deleteData = await axios.delete("http://localhost:4500/user/notes", {
-      id: props.id,
+      data: { id: props.id },
     });
 
     const newData = await fetchNotes();
@@ -39,7 +39,6 @@ const Card = (props) => {
           <button
             className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-red-600 border border-red-500 rounded-lg bg-red-50 transition-all duration-100 active:scale-95"
             onClick={async () => {
-              console.log("hello");
               await deleteCard();
             }}
           >
