@@ -1,4 +1,5 @@
 import User from "../models/registerModel.js";
+import bcrypt from "bcrypt";
 
 export const registerUser = async (req, res, next) => {
   try {
@@ -26,12 +27,15 @@ export const registerUser = async (req, res, next) => {
       publicId: null,
     };
 
+    const SALT = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, SALT);
+
     const newUser = await User.create({
       fullName,
       email,
       phone,
       gender,
-      password,
+      password: hashedPassword,
       dob,
       photo,
     });
@@ -60,7 +64,7 @@ export const LoginUser = async (req, res, next) => {
       return next(error);
     }
 
-    const existingUser = User.find({ email });
+    const existingUser = await User.findOne({ email });
 
     if (!existingUser) {
       const error = new Error("User is not registered");
@@ -68,7 +72,10 @@ export const LoginUser = async (req, res, next) => {
       return next(error);
     }
 
-    if (existingUser.password != password) {
+
+    const isVerified = await bcrypt.compare(password,existingUser.password);
+
+    if (!isVerified) {
       const error = new Error("Password entered is incorrect");
       error.statusCode = 401;
       return next(error);
@@ -76,7 +83,7 @@ export const LoginUser = async (req, res, next) => {
 
     res.status(200).json({ message: "Welcome Back", data: existingUser });
   } catch (error) {
-    console.log(error.message);
-    next();
+    console.log(error.message, "hello");
+    next(error);
   }
 };

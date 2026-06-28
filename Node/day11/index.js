@@ -2,14 +2,10 @@ import express from "express";
 
 const app = express();
 
-console.log("Mai om hu");
 
-app.get("/om", (req, res) => {
-  console.log("data backedn se lelo");
-});
 
-const port = 3000;
 
+const port = 5000;
 app.listen(port, () => {
-  console.log("Server is running on port ", port);
+  console.log("Server started running at port: ", port);
 });

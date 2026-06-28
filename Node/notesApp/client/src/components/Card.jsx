@@ -1,12 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import axios from "axios";
 import { CardDataContext } from "../context/CardContext";
 import { fetchNotes } from "../api/fetchApi";
+import EditNotesModal from "./EditNotesModal";
 
 const Card = (props) => {
   const [cardData, setCardData] = useContext(CardDataContext);
+  const [modal, setModal] = useState(false);
 
   async function deleteCard() {
     console.log("function entered");
@@ -35,6 +37,7 @@ const Card = (props) => {
         <div className="flex gap-3 items-center justify-end">
           <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 border border-blue-500 rounded-lg bg-blue-50 transition-all duration-100 active:scale-95">
             <MdEdit className="text-lg" /> Edit
+            
           </button>
           <button
             className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-red-600 border border-red-500 rounded-lg bg-red-50 transition-all duration-100 active:scale-95"
