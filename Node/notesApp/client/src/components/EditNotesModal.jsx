@@ -1,10 +1,14 @@
 import axios from "axios";
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import { fetchNotes } from "../api/fetchApi";
+import { CardDataContext } from "../context/CardContext";
 
 const EditNotesModal = (props) => {
   const [formData, setFormData] = useState({ title: props.editNote.title, description:  props.editNote.description , id:  props.editNote.id });
+
+  const [cardData, setCardData] = useContext(CardDataContext);
+  
 
   function handleChange(e) {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -17,9 +21,13 @@ const EditNotesModal = (props) => {
       const payload = { ...formData };
 
       const res = await axios.put("http://localhost:4500/user/notes", payload);
-      props.setEditNote((prev) => ({ ...prev, modalState: false }));
-      await fetchNotes()
       console.log(res);
+
+      props.setEditNote((prev) => ({ ...prev, modalState: false }));
+
+      const newData = await fetchNotes();
+      setCardData(newData);
+      
       
     } catch (error) {
       const ErrMessage = error?.response?.data?.message || error.message;
