@@ -15,12 +15,7 @@ export const postUserNote = async (req, res) => {
 };
 
 export const deleteUserNote = async (req, res) => {
-  console.log("0");
-console.log("req.body: ", req.body);
-
   const { id } = req.body;
-
-  console.log("id: ", id);
 
   try {
     const data = await notes.findByIdAndDelete(id);
@@ -31,6 +26,26 @@ console.log("req.body: ", req.body);
     } else {
       res.status(204).json({ message: "Data deleted successfully:" });
     }
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+export const editUserNote = async (req, res) => {
+  try {
+    const { id } = req.body;
+    const newData = {
+      title: req.body.title,
+      description: req.body.description,
+    };
+
+    const note = await notes.findByIdAndUpdate(id, newData);
+
+    if (!note) {
+      res.status(409).json({ message: "Note not found" });
+    }
+
+    res.status(200).json({ message: "Note Updated" });
   } catch (error) {
     console.log(error.message);
   }

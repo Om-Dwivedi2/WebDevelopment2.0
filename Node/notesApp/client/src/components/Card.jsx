@@ -8,7 +8,6 @@ import EditNotesModal from "./EditNotesModal";
 
 const Card = (props) => {
   const [cardData, setCardData] = useContext(CardDataContext);
-  const [modal, setModal] = useState(false);
 
   async function deleteCard() {
     console.log("function entered");
@@ -35,9 +34,18 @@ const Card = (props) => {
         <p className="text-gray-600 font-semibold">{props.description}</p>
         <hr className="bg-gray-400 my-5" />
         <div className="flex gap-3 items-center justify-end">
-          <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 border border-blue-500 rounded-lg bg-blue-50 transition-all duration-100 active:scale-95">
+          <button
+            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 border border-blue-500 rounded-lg bg-blue-50 transition-all duration-100 active:scale-95"
+            onClick={() => {
+              props.setEditNote((prev) => ({
+                title: props.title,
+                description: props.description,
+                id: props.id,
+                modalState: true,
+              }));
+            }}
+          >
             <MdEdit className="text-lg" /> Edit
-            
           </button>
           <button
             className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-red-600 border border-red-500 rounded-lg bg-red-50 transition-all duration-100 active:scale-95"
